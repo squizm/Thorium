@@ -46,6 +46,7 @@ void SceneMainMenu::render()
 	text.setOrigin(sf::Vector2f(text.getGlobalBounds().width / 2, text.getGlobalBounds().height / 2));
 	text.setPosition(game->window->getSize().x / 2, 50);
 	
+	// fade in game logo
 	game->window->draw(text);	
 	game->window->draw(background);
 
