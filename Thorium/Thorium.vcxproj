@@ -156,11 +156,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimatedText.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="SceneMainMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimatedText.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneMainMenu.h" />

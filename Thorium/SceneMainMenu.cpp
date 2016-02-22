@@ -1,13 +1,18 @@
 #include "SceneMainMenu.h"
 #include "SFML\Graphics.hpp"
 #include "GameEngine.h"
+#include <sstream>
 
 SceneMainMenu::SceneMainMenu(GameEngine* gameEngine)
 {
 	game = gameEngine;
 
-	if (!titleFont.loadFromFile("fonts/04B_19__.ttf"))
+	if (!fntTitle.loadFromFile("fonts/04B_19__.ttf"))
 		game->engineState = game->SHUTDOWN;
+	if (!fntDebug.loadFromFile("fonts/Minecraft.ttf"))
+		game->engineState = game->SHUTDOWN;
+
+	clkFPS = sf::Clock();
 
 	fade = 255;
 }
@@ -28,8 +33,8 @@ void SceneMainMenu::update()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 			game->engineState = GameEngine::ENGINE_STATE::SHUTDOWN;
 	}
-
-	(fade > 0) ? --fade : fade = 0;
+	
+	(fade > 0) ? fade -= 3 : fade = 0;
 }
 
 void SceneMainMenu::render()
@@ -40,15 +45,23 @@ void SceneMainMenu::render()
 	sf::RectangleShape background = sf::RectangleShape(sf::Vector2f(game->window->getSize()));
 	background.setFillColor(sf::Color(0, 0, 0, fade));
 
-
 	// Create a graphical text to display
-	sf::Text text("thoriumBREED", titleFont, 45);
+	sf::Text text("thoriumBREED", fntTitle, 45);
 	text.setOrigin(sf::Vector2f(text.getGlobalBounds().width / 2, text.getGlobalBounds().height / 2));
 	text.setPosition(game->window->getSize().x / 2, 50);
+
+	// Draw Framerate
+	float Framerate = 1.f / clkFPS.getElapsedTime().asSeconds();
+	clkFPS.restart();
+	std::ostringstream ss;
+	ss << "FPS: " << Framerate;
+	sf::Text txtFPS( ss.str(), fntDebug, 10);
+	txtFPS.setPosition(2, 2);
 	
 	// fade in game logo
-	game->window->draw(text);	
+	game->window->draw(text);
 	game->window->draw(background);
+	game->window->draw(txtFPS);
 
 	game->window->display();
 }

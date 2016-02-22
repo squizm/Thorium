@@ -5,7 +5,6 @@ GameEngine::GameEngine(int width, int height, std::string title): width(width), 
 {
 	// Create the main window
 	window = new sf::RenderWindow(sf::VideoMode(width, height), title);
-	window->setFramerateLimit(60);
 	engineState = ENGINE_STATE::RUNNING;
 
 	sceneList.push_back(new SceneMainMenu(this));

@@ -6,7 +6,9 @@ class SceneMainMenu : public Scene
 {
 public:
 	GameEngine* game;
-	sf::Font titleFont;
+	sf::Font fntTitle;
+	sf::Font fntDebug;
+	sf::Clock clkFPS;
 	int fade;
 
 	SceneMainMenu(GameEngine* gameEngine);
