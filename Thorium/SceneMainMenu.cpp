@@ -3,18 +3,39 @@
 #include "GameEngine.h"
 #include <sstream>
 
+void btnQuit()
+{
+	GameEngine::engineState = GAME_STATE_SHUTDOWN;
+}
+
+void btnSettings()
+{
+	GameEngine::activeScene = SCENE_SETTINGS;
+}
+
+void btnCampaign()
+{
+	GameEngine::activeScene = SCENE_CAMPAIGN;
+}
+
 SceneMainMenu::SceneMainMenu(GameEngine* gameEngine)
 {
 	game = gameEngine;
 
-	if (!fntTitle.loadFromFile("fonts/04B_19__.ttf"))
-		game->engineState = game->SHUTDOWN;
-	if (!fntDebug.loadFromFile("fonts/Minecraft.ttf"))
-		game->engineState = game->SHUTDOWN;
+	if (!fntTitle.loadFromFile("fonts/RioGrande.ttf"))
+		game->engineState = GAME_STATE_SHUTDOWN;
+	if (!fntDebug.loadFromFile("fonts/Anderson Thunderbirds Are GO.ttf"))
+		game->engineState = GAME_STATE_SHUTDOWN;
+	if (!fntButton.loadFromFile("fonts/Anderson Thunderbirds Are GO.ttf"))
+		game->engineState = GAME_STATE_SHUTDOWN;
 
 	clkFPS = sf::Clock();
 
-	fade = 255;
+	txtTitle = AnimatedText(game->window->getSize().x/2, game->window->getSize().y * 0.2, "(sixGUNsound)", &fntTitle, 60, 1000.0f, 1000.0f, 0.0f);
+
+	buttons.push_back(new Button(game->window->getSize().x / 2, game->window->getSize().y / 2, "Campaign", &fntButton, btnCampaign));
+	buttons.push_back(new Button(game->window->getSize().x / 2, game->window->getSize().y / 2 + 40, "Settings", &fntButton, btnSettings));
+	buttons.push_back(new Button(game->window->getSize().x / 2, game->window->getSize().y / 2 + 80, "Quit", &fntButton, btnQuit));
 }
 
 SceneMainMenu::~SceneMainMenu()
@@ -29,39 +50,41 @@ void SceneMainMenu::update()
 	{
 		// Close window: exit
 		if (event.type == sf::Event::Closed)
-			game->engineState = GameEngine::ENGINE_STATE::SHUTDOWN;
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-			game->engineState = GameEngine::ENGINE_STATE::SHUTDOWN;
+			GameEngine::engineState = GAME_STATE_SHUTDOWN;
+		if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Escape)
+			GameEngine::engineState = GAME_STATE_SHUTDOWN;
 	}
 	
-	(fade > 0) ? fade -= 3 : fade = 0;
+	for each (Button* btn in buttons)
+	{
+		btn->update(game->window);
+	}
+	
+	sf::Time time = clkFPS.restart();
+	txtTitle.update();
 }
 
 void SceneMainMenu::render()
 {
 	game->window->clear();
+	game->window->draw(txtTitle);
 
-	// Create background
-	sf::RectangleShape background = sf::RectangleShape(sf::Vector2f(game->window->getSize()));
-	background.setFillColor(sf::Color(0, 0, 0, fade));
-
-	// Create a graphical text to display
-	sf::Text text("thoriumBREED", fntTitle, 45);
-	text.setOrigin(sf::Vector2f(text.getGlobalBounds().width / 2, text.getGlobalBounds().height / 2));
-	text.setPosition(game->window->getSize().x / 2, 50);
+	for each (Button* btn in buttons)
+	{
+		game->window->draw(*btn);
+	}
 
 	// Draw Framerate
+	/*
 	float Framerate = 1.f / clkFPS.getElapsedTime().asSeconds();
 	clkFPS.restart();
 	std::ostringstream ss;
-	ss << "FPS: " << Framerate;
+	ss << "FPS: " << int(Framerate);
 	sf::Text txtFPS( ss.str(), fntDebug, 10);
 	txtFPS.setPosition(2, 2);
-	
-	// fade in game logo
-	game->window->draw(text);
-	game->window->draw(background);
 	game->window->draw(txtFPS);
+	*/
 
+	// Display screen
 	game->window->display();
 }

@@ -1,14 +1,21 @@
 #include "GameEngine.h"
 #include "SceneMainMenu.h"
+#include "SceneSettings.h"
+#include "SceneCampaign.h"
 
-GameEngine::GameEngine(int width, int height, std::string title): width(width), height(height)
+int GameEngine::engineState = GAME_STATE_RUNNING;
+int GameEngine::activeScene = SCENE_MAINMENU;
+
+GameEngine::GameEngine(int width, int height, std::string title): width(width), height(height), window(window)
 {
 	// Create the main window
 	window = new sf::RenderWindow(sf::VideoMode(width, height), title);
-	engineState = ENGINE_STATE::RUNNING;
+	window->setVerticalSyncEnabled(true);
 
-	sceneList.push_back(new SceneMainMenu(this));
-	activeScene = 0;
+	sceneList[0] = new SceneMainMenu(this);
+	sceneList[1] = new SceneCampaign(this);
+	sceneList[2] = new SceneSettings(this);
+	activeScene = SCENE_MAINMENU;
 }
 
 GameEngine::~GameEngine()
@@ -18,11 +25,10 @@ GameEngine::~GameEngine()
 
 void GameEngine::update()
 {
-	sceneList.at(activeScene)->update();
+	sceneList[activeScene]->update();
 }
 
 void GameEngine::render()
 {
-	// Draw active screne
-	sceneList.at(activeScene)->render();
+	sceneList[activeScene]->render();
 }

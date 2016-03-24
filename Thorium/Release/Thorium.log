@@ -1,0 +1,89 @@
+﻿  AnimatedText.cpp
+AnimatedText.cpp(16): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+AnimatedText.cpp(35): warning C4244: '=': conversion from 'float' to 'sf::Uint8', possible loss of data
+AnimatedText.cpp(36): warning C4244: '=': conversion from 'float' to 'sf::Uint8', possible loss of data
+AnimatedText.cpp(37): warning C4244: '=': conversion from 'float' to 'sf::Uint8', possible loss of data
+AnimatedText.cpp(45): warning C4244: '=': conversion from 'float' to 'sf::Uint8', possible loss of data
+AnimatedText.cpp(46): warning C4244: '=': conversion from 'float' to 'sf::Uint8', possible loss of data
+AnimatedText.cpp(47): warning C4244: '=': conversion from 'float' to 'sf::Uint8', possible loss of data
+  Button.cpp
+Button.cpp(10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Button.cpp(11): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+Button.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Button.cpp(16): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Button.cpp(17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Button.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameEngine.cpp
+  Main.cpp
+  Map.cpp
+Map.cpp(12): warning C4156: deletion of an array expression without using the array form of 'delete'; array form substituted
+Map.cpp(12): warning C4154: deletion of an array expression; conversion to pointer supplied
+Map.cpp(24): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+Map.cpp(49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Map.cpp(50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Map.cpp(51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Map.cpp(52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SceneCampaign.cpp
+  SceneMainMenu.cpp
+  SceneSettings.cpp
+SceneSettings.cpp(19): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  ScrollOption.cpp
+ScrollOption.cpp(29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+ScrollOption.cpp(38): warning C4018: '<': signed/unsigned mismatch
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glBlendFunc@8
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glClear@4
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glClearColor@16
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glDisable@4
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glEnable@4
+sfml-window-s.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__glEnable@4
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glLoadMatrixf@4
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glLoadMatrixf@4
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glMatrixMode@4
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glMatrixMode@4
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glPopAttrib@0
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glPopMatrix@0
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glPushAttrib@4
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glPushMatrix@0
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glViewport@16
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glColorPointer@16
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glDrawArrays@12
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glEnableClientState@4
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glPopClientAttrib@0
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glPushClientAttrib@4
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glTexCoordPointer@16
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2001: unresolved external symbol __imp__glVertexPointer@16
+sfml-graphics-s.lib(RenderWindow.cpp.obj) : error LNK2001: unresolved external symbol __imp__glReadPixels@28
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glFlush@0
+sfml-graphics-s.lib(Font.cpp.obj) : error LNK2001: unresolved external symbol __imp__glFlush@0
+sfml-graphics-s.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp__glFlush@0
+sfml-window-s.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetIntegerv@8
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetIntegerv@8
+sfml-graphics-s.lib(Shader.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetIntegerv@8
+sfml-graphics-s.lib(GLLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetIntegerv@8
+sfml-graphics-s.lib(TextureSaver.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetIntegerv@8
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetTexImage@20
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glLoadIdentity@0
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glTexImage2D@36
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glTexParameteri@12
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glBindTexture@8
+sfml-graphics-s.lib(TextureSaver.cpp.obj) : error LNK2001: unresolved external symbol __imp__glBindTexture@8
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glCopyTexSubImage2D@32
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glDeleteTextures@8
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGenTextures@8
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2001: unresolved external symbol __imp__glTexSubImage2D@36
+sfml-graphics-s.lib(GLLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetError@0
+sfml-window-s.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetError@0
+sfml-graphics-s.lib(GLLoader.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetString@4
+sfml-window-s.lib(GlContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__glGetString@4
+sfml-window-s.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__wglCreateContext@4
+sfml-window-s.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__wglDeleteContext@4
+sfml-window-s.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__wglGetCurrentContext@0
+sfml-window-s.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__wglGetProcAddress@4
+sfml-window-s.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__wglMakeCurrent@8
+sfml-window-s.lib(WglContext.cpp.obj) : error LNK2001: unresolved external symbol __imp__wglShareLists@8
+sfml-window-s.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp__joyGetPosEx@8
+sfml-window-s.lib(JoystickImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp__joyGetDevCapsW@12
+sfml-system-s.lib(SleepImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp__timeGetDevCaps@8
+sfml-system-s.lib(SleepImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp__timeBeginPeriod@4
+sfml-system-s.lib(SleepImpl.cpp.obj) : error LNK2001: unresolved external symbol __imp__timeEndPeriod@4
+C:\Users\ll66241\Documents\Visual Studio 2015\Projects\Thorium\Thorium\Release\Thorium.exe : fatal error LNK1120: 44 unresolved externals

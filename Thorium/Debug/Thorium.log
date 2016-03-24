@@ -1,0 +1,8 @@
+﻿  Button.cpp
+c:\users\ll66241\documents\visual studio 2015\projects\thorium\thorium\thorium\button.cpp(10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\ll66241\documents\visual studio 2015\projects\thorium\thorium\thorium\button.cpp(11): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\ll66241\documents\visual studio 2015\projects\thorium\thorium\thorium\button.cpp(14): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\ll66241\documents\visual studio 2015\projects\thorium\thorium\thorium\button.cpp(16): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\ll66241\documents\visual studio 2015\projects\thorium\thorium\thorium\button.cpp(17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\ll66241\documents\visual studio 2015\projects\thorium\thorium\thorium\button.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Thorium.vcxproj -> C:\Users\ll66241\Documents\Visual Studio 2015\Projects\Thorium\Thorium\Debug\Thorium.exe

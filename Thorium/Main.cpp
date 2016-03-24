@@ -3,10 +3,10 @@
 
 int main()
 {
-	GameEngine* game = new GameEngine(640, 360, "thoriumBREED");
+	GameEngine* game = new GameEngine(720, 405, "thoriumBREED");
 
 	// Start the game loop
-	while (game->engineState != GameEngine::ENGINE_STATE::SHUTDOWN)
+	while (GameEngine::engineState != GAME_STATE_SHUTDOWN)
 	{
 		game->update();
 		game->render();
